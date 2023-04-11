@@ -2163,8 +2163,9 @@ sigchld(int unused)
 void
 spawn(const Arg *arg)
 {
-	if (arg->v == dmenucmd)
+/*	if (arg->v == dmenucmd)
 		dmenumon[0] = '0' + selmon->num;
+		*/
 	selmon->tagset[selmon->seltags] &= ~scratchtag;
 	if (fork() == 0) {
 		if (dpy)
