@@ -120,6 +120,7 @@ static const char scratchpadname[] = "scratchpad";
 
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
                                       "-g", "200x50", NULL};
+static const char *lockcmd[] = {"i3lock", NULL};
 /*
 static const char *scratchpadcmd[]    = {
 "/home/hxh/github/dwm/scripts/popup.sh",   NULL };
@@ -129,6 +130,7 @@ static Key keys[] = {
     /* modifier                     key            function        argument */
     {MODKEY, XK_d, spawn, {.v = dmenucmd}},
     {MODKEY, XK_o, toggleoverview, {0}},
+    {MODKEY | ShiftMask, XK_l, lockcmd, {0}},
 
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_c, spawn, {.v = browsercmd}},
