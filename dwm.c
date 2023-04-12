@@ -306,6 +306,7 @@ static Monitor *systraytomon(Monitor *m);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static void tile(Monitor *);
+static void magicgrid(Monitor *m);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglescratch(const Arg *arg);
@@ -868,6 +869,8 @@ void toggleoverview(const Arg *arg) {
   selmon->isoverview ^= 1;
   view(&(Arg){.ui = target});
 }
+
+void magicgrid(Monitor *m) { grid(m, 12, 12); }
 
 void grid(Monitor *m, uint gappo, uint gappi) {
   unsigned int i, n;
